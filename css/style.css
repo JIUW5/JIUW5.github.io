@@ -1,0 +1,209 @@
+  /* 全局样式 */
+  * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+ /* 轮播容器样式 */
+.carouse1 {
+  position: relative;
+  width: 60%;
+  height: 300px;
+  overflow: hidden;
+  margin: 20px auto; /* 添加上下间距 */
+}
+/* 单个轮播元素样式 */
+.carouse1 .slide {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: opacity 0.5s ease;
+  border-radius: 8px; /* 移动圆角设置至这里 */
+}
+
+/* 轮播图图片样式 */
+.carouse1 .slide img {
+  margin-left: 10%;
+  margin-top: 15px;
+  width: 80%;
+  height: auto;
+  border-radius: 10px; /* 保留图片圆角 */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* 添加阴影效果 */
+  transform: scale(1.1); /* 添加缩放效果 */
+}
+.carouse1 .slide:hover {
+  transform: scale(1.2); /* 修改为放大效果 */
+}
+/* 第一个轮播元素显示 */
+.carouse1 .slide:first-child {
+  display: block;
+}
+
+
+
+    /* 主要内容样式 */
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 1200px;
+      margin: 20px auto;
+    }
+    
+    /* 每个区块的样式 */
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* background-color: rgba(255, 255, 255, 0.8); */
+      /* backdrop-filter: blur(20px); */
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin: 10px;
+    }
+    
+    section.carouse1{
+      background-color: rgba(30, 48, 188, 0.3);
+      backdrop-filter: blur(20px);
+    }
+    section.hot-games{
+      background-color: rgba(104, 30, 188, 0.5);
+      backdrop-filter: blur(20px);
+    }
+    section.all-games{
+      background-color: rgba(30, 117, 188, 0.5);
+      backdrop-filter: blur(20px);
+    }
+    /* 每个区块的标题样式 */
+    section h2 {
+      font-family: "微软雅黑", "Microsoft JhengHei", sans-serif;
+      font-size: 24px;
+      color: #660000;
+      margin-bottom: 10px;
+    }
+    
+    /* 热门游戏区块的样式 */
+    .hot-games {
+      width: 100%;
+    }
+    
+    /* 热门游戏列表的样式 */
+    .hot-games ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      list-style: none;
+    }
+    
+    /* 热门游戏列表项的样式 */
+    .hot-games li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 22%;
+      margin: 10px;
+    }
+    
+    /* 热门游戏链接的样式 */
+    .hot-games a {
+      font-family: "微软雅黑", "Microsoft JhengHei", sans-serif;
+      font-size: 18px;
+      color: #660000;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+    
+    /* 热门游戏图片的样式 */
+    .hot-games img {
+      width: 100%;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    
+    /* 全部游戏区块的样式 */
+    .all-games {
+      width: 100%;
+    }
+    
+    .game-carousel {
+      width: 100%;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .game-types {
+      display: flex;
+      padding: 0;
+      transition: transform 0.5s ease; 
+    }
+    
+    .game-types li {
+      flex: 0 0 20%; /* 每行展示5个 */
+      list-style: none;
+      text-align: center;
+      transition: all 0.5s ease; 
+      position: relative; /* 设置相对定位，使得子元素可以相对于此元素定位 */
+    }
+    .game-types li a {
+      font-weight: bolder;
+      position: absolute; /* 绝对定位，相对于最近的已定位祖先元素定位 */
+      top: 50%; /* 从顶部开始定位 */
+      left: 50%; /* 从左侧开始定位 */
+      transform: translate(-50%, -50%); /* 使用 transform 属性来居中 */
+      color: #ffffff; /* 文字颜色设置为白色 */
+      text-shadow: 2px 2px 4px #000; /* 文字阴影效果 */
+      font-size: 20px; /* 字体大小 */
+      text-decoration: none; /* 去掉链接下划线 */
+    }
+    .game-types li img {
+      width: 100%; /* 图片宽度设置为100%，高度自动调整 */
+      height: 150px;
+      padding: 5px;
+      border-radius: 8px;
+      object-fit: cover; /* 图片保持原始比例，多余部分裁剪 */
+      transition: all 0.5s ease;
+    }
+    .game-types li img:hover {
+      transform: scale(1.1); /* 图片放大到原来的1.1倍 */
+    }
+    
+    
+    /* 搜索区块的样式 */
+    .search {
+      width: 80%;
+    }
+    
+    /* 搜索输入框的样式 */
+    .search input {
+      display: block;
+      width: 80%;
+      font-family: "微软雅黑", "Microsoft JhengHei", sans-serif;
+      font-size: 18px;
+      color: #660000;
+      border: 2px solid #ffcccc;
+      border-radius: 10px;
+      padding: 10px;
+      margin: 10px auto;
+    }
+    
+    /* 搜索按钮的样式 */
+    .search button {
+      display: block;
+      width: 20%;
+      font-family: "微软雅黑", "Microsoft JhengHei", sans-serif;
+      font-size: 18px;
+      color: #ffffff;
+      background-color: #ff9999;
+      border: none;
+      border-radius: 10px;
+      padding: 10px;
+      margin: 10px auto;
+      cursor: pointer;
+    }
+    
+    

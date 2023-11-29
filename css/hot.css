@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+.bt{
+    width: 100%;
+    height: 200px;
+    background-image: url(../img/素材/bthot.png);
+    overflow: hidden;
+}
+.bt .bt1{
+    text-align: center;
+    color: white;
+    margin-top: 70px;
+}
+.px{
+    width: 100%;
+    height: 50px;
+}
+.px .px1{
+    font-size: 20px;
+    font-weight: bolder;
+    border-right: 2px solid rgb(235, 150, 31);
+    margin: 10px 10px 10px 5px;
+    float: right;
+    padding-right: 5px;
+}
+.px .px1 a{
+    color: white;
+}
+.px .px1 a:hover{
+    color: rgb(233, 23, 212);
+}
+.yxlb{
+    width: 90%;
+    height: auto;
+    overflow: hidden;
+    margin-left: 5%;
+}
+.yxlb .yxlb1{
+    width: 45%;
+    height: 240px;
+    float: left;
+    margin: 0px 20px 0px 30px;
+    overflow: hidden;
+}
+.yxlb .yxlb1 img{
+    height: 70%;
+    width: auto;
+    border-radius: 20px;
+}
+.yxlb .yxlb1 .wenan3{
+    margin-left: 60%;
+    width: 40%;
+    font-size: 20px;
+    font-weight: bolder;
+    color: rgb(247, 146, 126);
+    margin-top: -20%;
+}
+.fy{
+    text-align: center;
+    margin-top: 50px;
+}
+.fy a,.fy span{
+    font-size: 20px;
+    font-weight: bolder;
+    text-decoration: none;
+    padding: 15px;
+    color: rgb(233, 219, 23);
+    cursor: pointer;
+}
+.fy a:hover,.fy span :hover{
+    color: rgb(0, 255, 106);
+}
